@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "next lint",
     "prepare": "husky install",
-    "cy:open": "cypress open"
+    "cy:open": "cypress open",
+    "test": "cypress run --component"
   },
   "dependencies": {
     "@next/font": "13.1.0",
