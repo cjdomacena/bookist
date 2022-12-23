@@ -18,7 +18,8 @@
     "paths": {
       "@components/*": ["components/*"],
       "@lib/*": ["lib/*"]
-    }
+    },
+    "types": ["cypress"]
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "./cypress"],
   "exclude": ["node_modules"]
