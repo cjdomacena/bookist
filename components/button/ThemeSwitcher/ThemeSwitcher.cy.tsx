@@ -57,6 +57,6 @@ describe("ThemeSwitcher", () => {
     cy.getBySel("theme-context").click();
     cy.getBySel("media-switch").click();
 
-    cy.getBySel("theme-context").should("have.attr", "title", "media");
+    cy.getBySel("theme-context").should("have.attr", "title", "system");
   });
 });
