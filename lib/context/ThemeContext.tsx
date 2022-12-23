@@ -7,7 +7,7 @@ import {
   useEffect,
   useState,
 } from "react";
-export type ThemeReturnType = "dark" | "light" | "media";
+export type ThemeReturnType = "dark" | "light" | "system";
 interface IThemeContext {
   theme: ThemeReturnType;
   setTheme: Dispatch<SetStateAction<ThemeReturnType>>;
@@ -54,8 +54,8 @@ export const ThemeProvider: React.FC<PropsWithChildren> = ({ children }) => {
     if (typeof window !== "undefined") {
       const isDarkMode = window.matchMedia("(prefers-color-scheme: dark)");
       const localStorageKey = localStorage.getItem("theme");
-      if (theme === "media") {
-        if (localStorageKey === "media") {
+      if (theme === "system") {
+        if (localStorageKey === "system") {
           if (isDarkMode.matches) {
             document.documentElement.classList.add("dark");
           } else {

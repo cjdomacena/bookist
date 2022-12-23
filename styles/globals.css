@@ -3,6 +3,8 @@
 @tailwind utilities;
 
 body {
-  @apply text-neutral-800 dark:text-neutral-100;
+  @apply text-neutral-800 dark:text-neutral-200;
   @apply bg-white dark:bg-black;
+  font-family: "Red Hat Display", sans-serif;
+  @apply transition-colors;
 }
