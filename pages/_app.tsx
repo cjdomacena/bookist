@@ -1,4 +1,4 @@
-import { Navbar } from "@components/header/Navbar";
+import { Navbar } from "@components/common/header/Navbar";
 import { ThemeProvider } from "@lib/context/ThemeContext";
 import { createBrowserSupabaseClient } from "@supabase/auth-helpers-nextjs";
 import { SessionContextProvider } from "@supabase/auth-helpers-react";
