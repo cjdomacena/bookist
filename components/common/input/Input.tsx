@@ -19,7 +19,7 @@ export const Input: React.FC<InputProps> = ({ id, label, type, ...props }) => {
         {...props}
         className={classNames(
           props.className,
-          "w-full max-w-md rounded border bg-neutral-100 px-2 py-2 text-sm transition-colors  placeholder:text-neutral-400 focus:bg-neutral-50 focus:outline focus:outline-blue-500 dark:border-neutral-900"
+          "w-full max-w-md rounded bg-neutral-100 px-2 py-2 text-sm  placeholder:text-neutral-400  focus:bg-neutral-50 focus:outline focus:outline-neutral-300 dark:bg-neutral-900 dark:outline-neutral-700 focus:dark:bg-neutral-800"
         )}
       />
     </div>

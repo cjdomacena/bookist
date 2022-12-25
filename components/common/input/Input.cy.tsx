@@ -1,3 +1,4 @@
+import { ThemeProvider } from "@lib/context/ThemeContext";
 import { Input } from "./Input";
 
 describe("Custom Input Element", () => {
