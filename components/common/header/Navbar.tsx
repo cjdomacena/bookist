@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { MdBookOnline, MdCollectionsBookmark } from "react-icons/md";
+import { MdCollectionsBookmark } from "react-icons/md";
 
 export const Navbar = () => {
   return (
