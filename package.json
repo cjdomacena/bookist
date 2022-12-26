@@ -1,7 +1,21 @@
 {
   "name": "bookist",
+  "description": "Buy and sell your used books! Meetup on campus!",
+  "author": "Christian Domacena",
+  "license": "MIT",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "npm": ">=9.2.0",
+    "node": ">=18.12.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cjdomacena/bookist"
+  },
+  "bugs": {
+    "url": "https://github.com/cjdomacena/bookist/issues"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
