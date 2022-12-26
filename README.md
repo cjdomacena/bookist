@@ -49,7 +49,7 @@ npm run test
 
 - Website: https://christian-domacena.netlify.app/
 - Github: [@cjdomacena](https://github.com/cjdomacena)
-- LinkedIn: [@Christian Domacena](https://linkedin.com/in/Christian Domacena)
+- LinkedIn: [@Christian Domacena](https://www.linkedin.com/in/christian-domacena-4548231b8/)
 
 ## 🤝 Contributing
 
