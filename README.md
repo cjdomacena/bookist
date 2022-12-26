@@ -18,8 +18,6 @@
 
 ### 🏠 [Homepage](https://bookist-ochre.vercel.app/)
 
-### ✨ [Demo](https://bookist-ochre.vercel.app/)
-
 ## Prerequisites
 
 - npm >=8.19.2
