@@ -1,5 +1,5 @@
 import { Input } from "@components/common/input/Input";
-import { registerSchema } from "@lib/schema/user";
+import { registerSchema } from "@lib/schema";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
