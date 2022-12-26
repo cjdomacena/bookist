@@ -19,7 +19,6 @@ export const ThemeProvider: React.FC<PropsWithChildren> = ({ children }) => {
   const [theme, setTheme] = useState<ThemeReturnType>("dark");
 
   const updateThemeonMediaChange = (e: MediaQueryListEvent) => {
-    console.log("hello");
     if (e.matches) {
       document.documentElement.classList.add("dark");
     } else {
