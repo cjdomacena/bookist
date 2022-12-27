@@ -6,6 +6,7 @@ import { z } from "zod";
 import { useState } from "react";
 import { AiOutlineLoading3Quarters } from "react-icons/ai";
 import { useSupabaseClient } from "@supabase/auth-helpers-react";
+import { AuthError } from "@supabase/supabase-js";
 
 type FormData = z.infer<typeof registerSchema>;
 
@@ -26,26 +27,36 @@ export const RegisterForm = () => {
     },
   });
   const [loading, setLoading] = useState<boolean>(false);
+  const [error, setError] = useState<string>("");
 
   const onSubmit = async (data: FormData) => {
     setLoading(true);
-    const { error } = await supabase.auth.signUp({
-      email: data.email,
-      password: data.password,
-      options: {
-        data: {
-          full_name: data.fullName,
-          school_id: "20b3c4f2-ad24-4852-b50a-eb80136066b7",
+    try {
+      const { error } = await supabase.auth.signUp({
+        email: data.email,
+        password: data.password,
+        options: {
+          data: {
+            full_name: data.fullName,
+            school_id: "20b3c4f2-ad24-4852-b50a-eb80136066b7",
+          },
         },
-      },
-    });
-    if (error) throw error;
-    reset({
-      email: "",
-      password: "",
-      fullName: "",
-    });
-    setLoading(false);
+      });
+      if (error) throw error;
+    } catch (error: unknown) {
+      if (error instanceof AuthError) {
+        setError(error.message);
+      } else if (error instanceof Error) {
+        setError(error.message);
+      }
+    } finally {
+      reset({
+        email: "",
+        password: "",
+        fullName: "",
+      });
+      setLoading(false);
+    }
   };
 
   return (
@@ -54,6 +65,12 @@ export const RegisterForm = () => {
       onSubmit={handleSubmit(onSubmit)}
     >
       <h4 className="text-5xl">Create an Account</h4>
+      {error ? (
+        <p className="text-xs text-red-500" data-test="errorMessage">
+          {error}
+        </p>
+      ) : null}
+
       <Input
         id={"email"}
         type={"email"}
