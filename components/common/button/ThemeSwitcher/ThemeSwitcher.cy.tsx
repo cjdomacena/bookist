@@ -23,11 +23,14 @@ describe("ThemeSwitcher", () => {
       </ThemeProvider>
     );
     cy.getAllLocalStorage().then((result) => {
-      expect(result).to.deep.equal({
-        [port === "8081" ? "http://localhost:8081" : "http://localhost:8080"]: {
-          theme: "dark",
-        },
-      });
+      if (result) {
+        expect(result).to.deep.equal({
+          [port === "8081" ? "http://localhost:8081" : "http://localhost:8080"]:
+            {
+              theme: "dark",
+            },
+        });
+      }
     });
   });
 
