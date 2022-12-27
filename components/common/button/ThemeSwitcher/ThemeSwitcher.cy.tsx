@@ -11,6 +11,10 @@ describe("ThemeSwitcher", () => {
   });
 
   it("Should have a theme dark on initial mount if there's no theme key", () => {
+    let port: string;
+    cy.window().then((win) => {
+      port = win.location.port;
+    });
     cy.clearAllLocalStorage();
     cy.mount(
       <ThemeProvider>
@@ -19,7 +23,7 @@ describe("ThemeSwitcher", () => {
     );
     cy.getAllLocalStorage().then((result) => {
       expect(result).to.deep.equal({
-        "http://localhost:8081": {
+        [port === "8081" ? "http://localhost:8081" : "http://localhost:8080"]: {
           theme: "dark",
         },
       });
