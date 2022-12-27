@@ -7,5 +7,5 @@ const inter = Red_Hat_Display({
 });
 
 export default function Home() {
-  return <></>;
+  return <>Hello</>;
 }
