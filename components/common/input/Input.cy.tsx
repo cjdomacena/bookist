@@ -25,4 +25,18 @@ describe("Custom Input Element", () => {
     cy.get("input").should("have.attr", "placeholder", "Enter Something");
     cy.get("label").should("have.text", "Input");
   });
+  it("must show error message", () => {
+    cy.mount(
+      <Input
+        id="input"
+        label="Input"
+        placeholder="Enter Something"
+        type="text"
+        errorMessage="Invalid input"
+      />
+    );
+    cy.getBySel("error-input")
+      .should("be.visible")
+      .should("have.text", "Invalid input");
+  });
 });

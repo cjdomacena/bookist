@@ -25,7 +25,12 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
           )}
           ref={forwardRef}
         />
-        <p className="text-xs text-red-500">{errorMessage}</p>
+
+        {errorMessage ? (
+          <p className="text-xs text-red-500" data-test={`error-${id}`}>
+            {errorMessage}
+          </p>
+        ) : null}
       </div>
     );
   }
