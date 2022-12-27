@@ -6,6 +6,5 @@ export default defineConfig({
       framework: "next",
       bundler: "webpack",
     },
-    port: 8081,
   },
 });
