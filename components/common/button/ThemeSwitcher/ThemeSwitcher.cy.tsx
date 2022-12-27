@@ -22,7 +22,7 @@ describe("ThemeSwitcher", () => {
         <ThemeSwitcher />
       </ThemeProvider>
     );
-    cy.getAllLocalStorage().then((result) => {
+    cy.getAllLocalStorage({ log: true }).then((result) => {
       if (result) {
         expect(result).to.deep.equal({
           [port === "8081" ? "http://localhost:8081" : "http://localhost:8080"]:
