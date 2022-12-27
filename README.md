@@ -1,8 +1,8 @@
 <h1 align="center">Welcome to bookist 👋</h1>
 <p>
   <img alt="Version" src="https://img.shields.io/badge/version-0.1.0-blue.svg?cacheSeconds=2592000" />
-  <img src="https://img.shields.io/badge/npm-%3E%3D9.2.0-blue.svg" />
-  <img src="https://img.shields.io/badge/node-%3E%3D18.12.1-blue.svg" />
+  <img src="https://img.shields.io/badge/npm-8.19.2-blue.svg" />
+  <img src="https://img.shields.io/badge/node-v18.12.1-blue.svg" />
   <a href="https://github.com/cjdomacena/bookist#readme" target="_blank">
     <img alt="Documentation" src="https://img.shields.io/badge/documentation-yes-brightgreen.svg" />
   </a>
@@ -16,12 +16,10 @@
 
 > Buy and sell your used books! Meetup on campus!
 
-### 🏠 [Homepage](https://bookist-ochre.vercel.app/)
-
 ## Prerequisites
 
-- npm >=8.19.2
-- node >=18.12.1
+- npm 8.19.2
+- node v18.12.1
 
 ## Install
 
@@ -32,7 +30,7 @@ npm install
 ## Usage
 
 ```sh
-npm run dev
+npm run start
 ```
 
 ## Run tests
@@ -45,13 +43,12 @@ npm run test
 
 👤 **Christian Domacena**
 
-- Website: https://christian-domacena.netlify.app/
+- Website: christian-domacena.netlify.app
 - Github: [@cjdomacena](https://github.com/cjdomacena)
-- LinkedIn: [@Christian Domacena](https://www.linkedin.com/in/christian-domacena-4548231b8/)
 
 ## 🤝 Contributing
 
-Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/cjdomacena/bookist/issues). You can also take a look at the [contributing guide]().
+Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/cjdomacena/bookist/issues). You can also take a look at the [contributing guide](https://github.com/cjdomacena/bookist/blob/master/CONTRIBUTING.md).
 
 ## Show your support
 
