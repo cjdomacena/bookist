@@ -1,6 +1,10 @@
 import { ThemeProvider } from "@lib/context/ThemeContext";
 import { ThemeSwitcher } from "./ThemeSwitcher";
 
+beforeEach(() => {
+  cy.clearLocalStorage();
+});
+
 describe("ThemeSwitcher", () => {
   it("Mounts properly", () => {
     cy.mount(
