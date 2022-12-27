@@ -11,11 +11,12 @@ describe("ThemeSwitcher", () => {
   });
 
   it("Should have a theme dark on initial mount if there's no theme key", () => {
+    cy.clearLocalStorage();
     let port: string;
     cy.window().then((win) => {
       port = win.location.port;
     });
-    cy.clearAllLocalStorage();
+
     cy.mount(
       <ThemeProvider>
         <ThemeSwitcher />
