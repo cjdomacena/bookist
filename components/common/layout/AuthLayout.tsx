@@ -1,3 +1,5 @@
+import { useRouter } from "next/router";
+import { MdArrowBack } from "react-icons/md";
 import { ThemeSwitcher } from "../button";
 
 interface AuthLayoutProps {
@@ -6,6 +8,7 @@ interface AuthLayoutProps {
 }
 
 export const AuthLayout = ({ background, form }: AuthLayoutProps) => {
+  const router = useRouter();
   return (
     <div className="min-w-screen relative min-h-screen overflow-hidden lg:p-0 xl:p-0 2xl:p-0">
       <div className="grid h-full min-h-screen w-full grid-cols-8">
@@ -18,6 +21,15 @@ export const AuthLayout = ({ background, form }: AuthLayoutProps) => {
         <div className="col-span-full grid place-items-center p-4 lg:col-span-5 xl:col-span-3 2xl:col-span-3">
           {form}
         </div>
+      </div>
+      <div className="absolute top-4 left-4">
+        <button
+          className="flex items-center gap-1 rounded bg-neutral-900 px-4 py-2 text-sm font-bold "
+          onClick={() => router.back()}
+        >
+          <MdArrowBack />
+          Back
+        </button>
       </div>
       <div className="absolute top-4 right-4">
         <ThemeSwitcher />
