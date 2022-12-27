@@ -1,0 +1,25 @@
+name: Cypress Tests
+
+on: [push]
+
+jobs: 
+  cypress-run:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Cache npm dependencies
+        uses: actions/cache@v3.2.1
+        with:
+         # path - A list of files, directories, and wildcard patterns to cache and restore. See @actions/glob for supported patterns.
+          path: '~/.npm'
+         # key - An explicit key for restoring and saving the cache
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+         # restore-keys - An ordered list of keys to use for restoring the cache if no cache hit occurred for key
+          restore-keys: |
+            ${{ runner.os }}-node-
+      - name: Cypress.io
+        uses: cypress-io/github-action@v5.0.2
+        with: 
+          start: npm run test
+        
