@@ -44,6 +44,8 @@ export const ThemeProvider: React.FC<PropsWithChildren> = ({ children }) => {
         setTheme(localStorageKey as ThemeReturnType);
         if (localStorageKey === "dark") {
           document.documentElement.classList.add("dark");
+        } else {
+          document.documentElement.classList.remove("dark");
         }
       }
     }
