@@ -4,7 +4,7 @@
 
 body {
   @apply text-neutral-800 dark:text-neutral-200;
-  @apply bg-white dark:bg-[#131214];
+  @apply bg-white dark:bg-primary;
   font-family: "Red Hat Display", sans-serif;
   @apply transition-colors;
 }

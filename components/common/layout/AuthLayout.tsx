@@ -24,7 +24,7 @@ export const AuthLayout = ({ background, form }: AuthLayoutProps) => {
       </div>
       <div className="absolute top-4 left-4">
         <button
-          className="flex items-center gap-1 rounded bg-neutral-900 px-4 py-2 text-sm font-bold "
+          className="flex items-center gap-1 rounded bg-primary px-4 py-2 text-sm font-bold "
           onClick={() => router.back()}
         >
           <MdArrowBack />
