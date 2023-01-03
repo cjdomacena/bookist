@@ -20,4 +20,5 @@ export const listingSchema = z.object({
   isbn: z
     .string()
     .regex(/^(?=(?:[^0-9]*[0-9]){10}(?:(?:[^0-9]*[0-9]){3})?$)[\d-]+$/),
+  status: z.enum(["sold", "active", "inactive"]).default("active"),
 });
