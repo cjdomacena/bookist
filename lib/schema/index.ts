@@ -19,6 +19,10 @@ export const listingSchema = z.object({
   isPublished: z.boolean().default(false),
   isbn: z
     .string()
-    .regex(/^(?=(?:[^0-9]*[0-9]){10}(?:(?:[^0-9]*[0-9]){3})?$)[\d-]+$/),
+    .regex(
+      /^(?=(?:[^0-9]*[0-9]){10}(?:(?:[^0-9]*[0-9]){3})?$)[\d-]+$/,
+      "Must be a valid ISBN"
+    )
+    .optional(),
   status: z.enum(["sold", "active", "inactive"]).default("active"),
 });
