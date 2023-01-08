@@ -1,6 +1,6 @@
 import { useRouter } from "next/router";
-import { MdArrowBack } from "react-icons/md";
 import { ThemeSwitcher } from "../button";
+import { BackButton } from "../button/BackButton";
 
 interface AuthLayoutProps {
   background?: JSX.Element | JSX.Element[];
@@ -23,13 +23,7 @@ export const AuthLayout = ({ background, form }: AuthLayoutProps) => {
         </div>
       </div>
       <div className="absolute top-4 left-4">
-        <button
-          className="flex items-center gap-1 rounded bg-primary px-4 py-2 text-sm font-bold "
-          onClick={() => router.back()}
-        >
-          <MdArrowBack />
-          Back
-        </button>
+        <BackButton onClick={() => router.back()} />
       </div>
       <div className="absolute top-4 right-4">
         <ThemeSwitcher />
