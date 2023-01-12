@@ -15,6 +15,7 @@ export const AsideNav = ({
   className?: string;
   title: string;
 }) => {
+  const router = useRouter();
   return (
     <aside className={classNames(className, "space-y-2")}>
       <div>
@@ -38,7 +39,10 @@ export const AsideNav = ({
           <AsidePill text="Saved" icon={<MdBookmark />} href="/saved" />
         </ul>
       </div>
-      <button className="my-2 flex w-full items-center justify-center gap-2 rounded bg-purple-500 py-2 text-xs  text-purple-200 ring-1 ring-purple-800 transition-colors hover:bg-purple-800 dark:bg-purple-900/50 dark:hover:bg-purple-800">
+      <button
+        className="my-2 flex w-full items-center justify-center gap-2 rounded bg-purple-500 py-2 text-xs  text-purple-200 ring-1 ring-purple-800 transition-colors hover:bg-purple-800 dark:bg-purple-900/50 dark:hover:bg-purple-800"
+        onClick={() => router.push("/create-new")}
+      >
         Create Listing
         <MdArrowForward />
       </button>

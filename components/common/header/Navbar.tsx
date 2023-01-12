@@ -1,5 +1,6 @@
 import { ThemeSwitcher } from "../button";
 import { Logo } from "../util/Logo";
+import Link from "next/link";
 
 export const Navbar = () => {
   return (
@@ -8,8 +9,13 @@ export const Navbar = () => {
         <div className="w-fit">
           <Logo />
         </div>
-        <ul className="flex items-center gap-2">
-          <li>Hello</li>
+        <ul className="flex items-center gap-2 text-sm">
+          <li>
+            <Link href="/login">Login</Link>
+          </li>
+          <li>
+            <Link href="/register">Register</Link>
+          </li>
           <li>
             <ThemeSwitcher />
           </li>

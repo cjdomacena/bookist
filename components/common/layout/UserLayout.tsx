@@ -16,7 +16,7 @@ export const UserLayout = ({
           className="w-full  md:max-w-[200px] lg:max-w-[200px] xl:max-w-[200px] 2xl:max-w-[200px]"
           title={title}
         />
-        <div className="w-full flex-grow border p-4 md:w-auto lg:w-auto xl:w-auto 2xl:w-auto">
+        <div className="w-full flex-grow  p-4 md:w-auto lg:w-auto xl:w-auto 2xl:w-auto">
           {children}
         </div>
       </div>
